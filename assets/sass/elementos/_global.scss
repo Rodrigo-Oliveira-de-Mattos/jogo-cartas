@@ -1,0 +1,50 @@
+@use '../util' as u;
+
+body{
+    background-color: u.$fundo;
+    border: 20px solid u.$escuro;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.intro{  
+    
+    width: 50vw;
+    
+
+    &__mobile{
+        display: block;
+        font-size: u.$font-mobile;
+    }
+
+    &__descktop{
+        display: none;
+    }
+
+    @include u.breakpoint(mobile){
+        &__mobile{
+            display: none;
+        }
+
+        &__descktop{
+            display: block;
+            font-size: u.$font-pc;
+        }
+    }
+
+    &__mobile, &__descktop{
+        button{
+            border-radius: 1rem;
+            height: 20rem;
+            width: 100%;
+            background-color: u.$medio;
+            color: hsl(0, 0%, 100%);
+            font-size: 1em;
+            font-family: u.$font-family;
+            text-transform: uppercase;
+        }
+    }
+}
+

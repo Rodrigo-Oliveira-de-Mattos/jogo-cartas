@@ -1,0 +1,21 @@
+@use 'elementos';
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+button{
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+.comecou{
+    display: none;
+}

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo de cartas TOP</title>
+
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <main>
+        <section class="intro">
+            <div class="intro__mobile">
+                <button id="btn-mobile">pegar 3 cartas</button>
+            </div>
+            <div class="intro__descktop">
+                <button id="btn-pc">pegar 7 cartas</button>
+            </div>
+        </section>
+
+        <section id="mesa" class="mesa hidden">
+            <div id="maquina" class="cartas-maquina mao">
+            </div>
+            
+            <div id="area-comparacao" class="comparador">
+                <span id="ponto-maquina" class="comparador__ponto-maquina ">pontos maquina: --</span>
+                
+                <div class="comparador__cartas-e-resultado ">
+
+                    <div id="escolha-maquina" class="comparador__escolha-maquina "></div>
+
+                    <span id="resultado-visual" class="comparador__resultado " >X</span>
+
+                    <div id="escolha-user" class="comparador__escolha-user " ></div>
+                </div>
+                
+                <span id="ponto-user" class="comparador__ponto-user ">seus pontos: --</span>
+            </div>
+            
+            <div id="user" class="cartas-user mao">
+            </div>
+        </section>
+
+    </main>
+
+    <script type="module" src="assets/script/index.js"></script>
+</body>
+</html>

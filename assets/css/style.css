@@ -1,0 +1,161 @@
+body {
+  background-color: hsl(120, 90%, 30%);
+  border: 20px solid hsl(120, 90%, 20%);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.intro {
+  width: 50vw;
+}
+.intro__mobile {
+  display: block;
+  font-size: 2rem;
+}
+.intro__descktop {
+  display: none;
+}
+@media (min-width: 690px) {
+  .intro__mobile {
+    display: none;
+  }
+  .intro__descktop {
+    display: block;
+    font-size: 4rem;
+  }
+}
+.intro__mobile button, .intro__descktop button {
+  border-radius: 1rem;
+  height: 20rem;
+  width: 100%;
+  background-color: hsl(120, 90%, 25%);
+  color: hsl(0, 0%, 100%);
+  font-size: 1em;
+  font-family: sans-serif;
+  text-transform: uppercase;
+}
+
+.mesa {
+  width: 95vw;
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.mesa img {
+  width: 10rem;
+}
+@media (min-width: 690px) {
+  .mesa {
+    width: 100vw;
+    height: 85vh;
+  }
+  .mesa img {
+    width: 13rem;
+  }
+}
+.mesa .mao {
+  display: flex;
+  justify-content: space-evenly;
+  width: 90%;
+}
+.mesa .comparador {
+  display: flex;
+  height: 100%;
+  width: 90%;
+  padding: 5rem 0;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.mesa .comparador .comparado, .mesa .comparador .perdeu, .mesa .comparador .ganhou {
+  border: 5px solid;
+  transition: 0.3s;
+}
+.mesa .comparador .ganhou {
+  border-color: hsl(170, 100%, 65%);
+}
+.mesa .comparador .perdeu {
+  border-color: hsl(0, 100%, 65%);
+}
+@media (min-width: 690px) {
+  .mesa .comparador {
+    flex-direction: row;
+    width: 80%;
+    gap: 3rem;
+  }
+}
+.mesa .comparador__cartas-e-resultado {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: center;
+  gap: 2rem;
+}
+.mesa .comparador__ponto-maquina, .mesa .comparador__ponto-user {
+  width: 30rem;
+  padding: 1rem;
+  background-color: hsl(120, 90%, 20%);
+  font-size: 2rem;
+  text-align: center;
+  border-radius: 1rem;
+  color: white;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+@media (min-width: 690px) {
+  .mesa .comparador__ponto-maquina, .mesa .comparador__ponto-user {
+    width: 100%;
+  }
+}
+.mesa .comparador__resultado {
+  background-color: hsl(120, 90%, 20%);
+  width: 4rem;
+  height: 4rem;
+  padding: 1rem;
+  border-radius: 999px;
+  display: grid;
+  place-items: center;
+  font-size: 2rem;
+  color: white;
+}
+
+.mesa.hidden {
+  display: none;
+}
+
+.cartaParaEscolha:hover {
+  scale: 1.1;
+  cursor: pointer;
+}
+
+.cartaParaEscolha.usado, .escolhaMaquina.usado {
+  opacity: 0.3;
+}
+.cartaParaEscolha.usado:hover, .escolhaMaquina.usado:hover {
+  cursor: default;
+  scale: 1;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+.comecou {
+  display: none;
+}/*# sourceMappingURL=style.css.map */

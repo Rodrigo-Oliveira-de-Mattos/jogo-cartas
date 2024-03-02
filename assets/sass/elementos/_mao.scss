@@ -1,0 +1,124 @@
+@use "../util" as u;
+
+.mesa {
+  width: 95vw;
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  img {
+    width: 10rem;
+  }
+
+  @include u.breakpoint(mobile) {
+    width: 100vw;
+    height: 85vh;
+    img {
+      width: 13rem;
+    }
+  }
+
+  .cartas-user {
+    // img {
+    //   &:hover {
+    //     scale: 1.1;
+    //     cursor: pointer;
+    //   }
+    // }
+  }
+
+  .mao {
+    display: flex;
+    justify-content: space-evenly;
+    width: 90%;
+
+    
+  }
+
+  .comparador {
+    display: flex;
+    height: 100%;
+    width: 90%;
+    padding: 5rem 0;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    .comparado {
+      border: 5px solid;
+      transition: 0.3s;
+    }
+
+    .ganhou {
+      @extend .comparado;
+      border-color: hsl(170, 100%, 65%);
+    }
+
+    .perdeu {
+      @extend .comparado;
+      border-color: hsl(0, 100%, 65%);
+    }
+
+    @include u.breakpoint(mobile) {
+      flex-direction: row;
+      width: 80%;
+      gap: 3rem;
+    }
+
+    &__cartas-e-resultado {
+      display: flex;
+      align-items: center;
+      width: 100%;
+      justify-content: center;
+      gap: 2rem;
+    }
+
+    &__ponto-maquina,
+    &__ponto-user {
+      width: 30rem;
+      padding: 1rem;
+      background-color: u.$escuro;
+      font-size: u.$font-mobile;
+      text-align: center;
+      border-radius: 1rem;
+      color: white;
+      font-weight: bold;
+      letter-spacing: 2px;
+      @include u.breakpoint(mobile) {
+        width: 100%;
+      }
+    }
+
+    &__resultado {
+      background-color: u.$escuro;
+      width: 4rem;
+      height: 4rem;
+      padding: 1rem;
+      border-radius: 999px;
+      display: grid;
+      place-items: center;
+      font-size: u.$font-mobile;
+      color: white;
+    }
+  }
+}
+
+.mesa.hidden {
+  display: none;
+}
+
+.cartaParaEscolha{
+        &:hover {
+          scale: 1.1;
+          cursor: pointer;
+        }
+}
+
+.cartaParaEscolha.usado, .escolhaMaquina.usado {
+    opacity: 0.3;
+        &:hover{
+              cursor: default;
+              scale: 1;
+        }
+}
